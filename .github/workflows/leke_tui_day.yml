@@ -34,4 +34,5 @@ jobs:
 
     - name: tui
       run: |
-        python ./t/leke_tui_day.py
+        cd t
+        python leke_tui_day.py
