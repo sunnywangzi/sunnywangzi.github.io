@@ -36,7 +36,6 @@ jobs:
 
     - name: tui
       run: |
-        cd t
         python leke_tui_day.py
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@4.2.1
