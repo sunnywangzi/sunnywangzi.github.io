@@ -156,11 +156,11 @@ if str(yan_type) == 'j':
     yan_lei = '网易云'
 yiyan = yan + '</p><p>' + '<p style="text-align:right;">----' + yan_from + '(' + yan_lei + ')'
 
-with open('./server file/index.html','r') as file_obj:
+with open('./server file/index_night.html','r') as file_obj:
     content1 = file_obj.read()
     print(content1)
 file_obj.close()
-f3 = open('./server file/index.html','w')
+f3 = open('./server file/index_night.html','w')
 content1 = int(content1) + 1
 f3.write(str(content1))
 f3.close()
