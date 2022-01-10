@@ -1,0 +1,37 @@
+
+name: leke_tui_day
+
+on:
+  workflow_dispatch:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron: '30 21 * * *'
+  #push:
+   # branches: [ main ]
+ # pull_request:
+#    branches: [ main ]
+
+
+
+jobs:
+  job1:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install lxml
+        pip install pandas
+        pip install requests
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: tui
+      run: |
+        python tui_leke_day.py
