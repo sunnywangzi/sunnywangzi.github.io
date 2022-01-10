@@ -1,5 +1,5 @@
 
-name: leke_tui_day
+name: leke_tui_night
 
 on:
   workflow_dispatch:
